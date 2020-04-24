@@ -1,23 +1,20 @@
 # README
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, foreign_key: true|
-|user_name|integer|null: false, foreign_key: true|
-|name|integer|null: false, foreign_key: true|
-
+|groupname|text|null: false|
+|nickname|text|null: false, foreign_key: true|
 
 ### Association
 - has_many :groups_users
 - has_many :users, through: :groups_users
 
-## userテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, foreign_key: true|
-|email|integer|null: false, foreign_key: true|
-|password|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|nickname|text|null: false, funique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
 - has_many :posts
@@ -27,9 +24,8 @@
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|integer|null: false, foreign_key: true|
-|image|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|text|text|null: false|
+|image|string||
 
 ### Association
 - belongs_to :users

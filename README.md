@@ -2,7 +2,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|null: false|
+|name|text|null: false|
 
 ### Association
 - has_many :posts
@@ -17,6 +17,7 @@
 |password|string|null: false|
 
 ### Association
+- has_many :posts
 - has_many :groups_users
 - has_many :groups, through: :groups_users
 
@@ -25,11 +26,12 @@
 |------|----|-------|
 |text|text||
 |image|string||
+|user|integer|null: false, foreign_key: true|
+|group|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :groups
-- has_many :groups_users
-- has_many :groups, through: :groups_users
+- belongs_to :users
 
 ## groups_usersテーブル
 |Column|Type|Options|

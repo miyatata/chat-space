@@ -3,9 +3,9 @@
 |Column|Type|Options|
 |------|----|-------|
 |groupname|text|null: false|
-|nickname|text|null: false, foreign_key: true|
 
 ### Association
+- has_many :posts
 - has_many :groups_users
 - has_many :users, through: :groups_users
 
@@ -17,18 +17,17 @@
 |password|string|null: false|
 
 ### Association
-- has_many :posts
 - has_many :groups_users
 - has_many :groups, through: :groups_users
 
 ## postsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
 |image|string||
 
 ### Association
-- belongs_to :users
+- belongs_to :groups
 - has_many :groups_users
 - has_many :groups, through: :groups_users
 

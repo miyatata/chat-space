@@ -1,44 +1,41 @@
 
 .side-bar {
+  
   background-color: #253141;
   width: 300px;
-  color: #ffffff;
   font-weight: bold;
   &__username{
-    height: 100px;
+    @include wide_high(300px,100px);
     position: relative;
     
     .top-items{
+      @include size_color(16px);
       @include put-center();
-      width: 260px;
-      height: 20px;
+      @include wide_high(260px,20px);
       display: flex;
       justify-content: space-between;
-      &__name{
-        font-size: 16px;
-      }
       &__icons{
         display: flex;
         &__edit{
-          color: #ffffff;
+          @include color();
           margin-right: 5px;
         }
         &__cog{
-          color: #ffffff;
+          @include color();
         }
       }
     }
   }
   &__grouplist{
     background-color: #2f3e51;
-    height: calc(100% - 100px);
+    @include wide_high(300px,calc(100% - 100px));
     padding: 0 20px;
     .group-name{
-      font-size: 15px;
+      @include size_color(15px);
       padding-top: 20px;
     }
     .group-message{
-      font-size: 11px;
+      @include size_color(11px);
       padding-top: 5px;
       padding-bottom: 40px;
     }

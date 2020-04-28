@@ -24,3 +24,24 @@
   margin: $putMargin;
 }
 
+@mixin wide_high(
+  $Width: 0,
+  $Hight: 0,
+) {
+  width: $Width;
+  height: $Hight;
+}
+
+@mixin size_color(
+  $fSize: 0,
+  $fColor: #ffffff,
+){
+  font-size: $fSize;
+  color: $fColor;
+}
+
+@mixin color($fColor: #ffffff){
+  color: $fColor;
+}
+
+

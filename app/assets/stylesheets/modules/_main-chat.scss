@@ -1,8 +1,6 @@
 .chat-main {
   background-color: #ffffff;
-  width: calc(100vw - 300px);
-  height: 100vh;
-
+  @include wide_high(calc(100vw - 300px),100vh);
   &__group{
     height: 100px;
     border-bottom: solid 1px #eeeeee;
@@ -13,24 +11,20 @@
     &__info{
       
       &__name{
-        font-size: 20px;
-        color: #333333;
+        @include size_color(20px,#333333);
         margin-top: 35px;
       }
       &__member{
-        font-size: 12px;
-        color: #999999;
+        @include size_color(12px,#999999);
         margin-top: 15px;
       } 
     }
 
     &__edit{
+      @include wide_high(72px,40px);
+      @include size_color(16px,#38aef0);
       margin-top: 28px;
-      width: 72px;
-      height: 40px;
       border: solid 1px;
-      color: #38aef0;
-      font-size: 16px;
       padding: 0 20px;
       line-height: 40px;
       text-decoration: none;
@@ -46,18 +40,15 @@
       padding-top: 35px;
       padding-bottom: 12px;
       &__name{
-        color: #333333;
-        font-size: 16px;
+        @include size_color(16px,#333333);
       }
       &__date{
+        @include size_color(12px,#999999);
         margin-left: 10px;
-        color: #999999;
-        font-size: 12px;
       }
     }
     .message{
-      color: #434A54;
-      font-size: 14px;
+      @include size_color(14px,#434A54);
       padding-bottom: 11px;
     }
   }
@@ -74,8 +65,7 @@
         position: relative;
 
         &__text{
-          height: 50px;
-          width: 100%;
+          @include wide_high(100%,50px);
           line-height: 50px;
           border-style: none;
           padding:0 40px 0 10px;
@@ -95,10 +85,9 @@
       }
 
       .submit-btn{
-        height: 50px;
-        width: 100px;
+        @include wide_high(100px,50px);
+        @include color();
         background-color: #38aef0;
-        color: white;
         margin-left: 15px;
         cursor: pointer;
       }

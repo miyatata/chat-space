@@ -14,9 +14,14 @@
         @include size_color(20px,#333333);
         margin-top: 35px;
       }
-      &__member{
+      &__members{
         @include size_color(12px,#999999);
         margin-top: 15px;
+        display: flex;
+        .member {
+          display: inline-block;
+          padding-right: 5px;
+        }
       } 
     }
 
@@ -28,18 +33,20 @@
       padding: 0 20px;
       line-height: 40px;
       text-decoration: none;
+      
     }
   }
 
-  &__messagelist{
+  .messages{
     background-color: #fafafa;
-    height: calc(100% - 190px);
+    height: calc(100vh - 90px);
     padding-left: 40px;
-    .data{
+    
+    .upper-message{
       display: flex;
       padding-top: 35px;
       padding-bottom: 12px;
-      &__name{
+      &__user-name{
         @include size_color(16px,#333333);
       }
       &__date{
@@ -53,44 +60,50 @@
     }
   }
 
+
   .form{
-    height: 90px;
-    background-color: #d2d2d2;
-    padding: 20px 40px;
-
+    bottom: 0px;
+    
     form{
+      height: 90px;
+      width: 100%;
+      background-color: #d2d2d2;
+      padding: 20px 40px;
       display: flex;
-      .input-box{
-        width: 100%;
-        position: relative;
+      
 
-        &__text{
-          @include wide_high(100%,50px);
-          line-height: 50px;
-          border-style: none;
-          padding:0 40px 0 10px;
-        }
-
+      .form__message{
+        @include wide_high(100%,50px);
+        line-height: 50px;
+        border-style: none;
+        padding:0 40px 0 10px;
+      }
+      
+      .form__mask{
         &__image{
-          position: absolute;
-          top: 10px;
-          right:10px;
-          font-size: 1.3rem;
-          cursor: pointer;
+          position: relative;
+        
+          .icon{
+            position: absolute;
+            top: 10px;
+            right:10px;
+            font-size: 1.3rem;
+            cursor: pointer;
+          }
 
-          &__file{
+          .hidden{
             display: none;
           }
         }
       }
-
-      .submit-btn{
+      .form__submit{
         @include wide_high(100px,50px);
         @include color();
         background-color: #38aef0;
         margin-left: 15px;
         cursor: pointer;
       }
-    }    
-  }
+    } 
+  }   
 }
+

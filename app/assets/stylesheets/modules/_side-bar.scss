@@ -28,7 +28,7 @@
   }
   &__grouplist{
     background-color: #2f3e51;
-    @include wide_high(300px,calc(100% - 100px));
+    @include wide_high(300px,100vh);
     padding: 0 20px;
     .group-name{
       @include size_color(15px);

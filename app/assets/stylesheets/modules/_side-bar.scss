@@ -30,11 +30,12 @@
     background-color: #2f3e51;
     @include wide_high(300px,calc(100%-100px));
     padding: 0 20px;
-    .group-name{
+    .group{
+    &__name{
       @include size_color(15px);
       padding-top: 20px;
     }
-    .group-message{
+    &__message{
       @include size_color(11px);
       padding-top: 5px;
       padding-bottom: 40px;

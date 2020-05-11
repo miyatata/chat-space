@@ -27,12 +27,15 @@
 
     &__edit{
       @include wide_high(72px,40px);
-      @include size_color(16px,#38aef0);
       margin-top: 28px;
       border: solid 1px;
       padding: 0 20px;
       line-height: 40px;
-      text-decoration: none;
+      
+      .edit-btn{
+        text-decoration: none;
+        @include size_color(16px,#38aef0);
+      }
       
     }
   }
